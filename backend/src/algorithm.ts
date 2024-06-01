@@ -181,7 +181,7 @@ function bytes(data: string): string {
 function bytes_to_num_array(bytes: string): number[] {
   let totals: number[] = [];
   for (let i = 0; i * 8 < bytes.length; i++) {
-    totals.push(bytes_to_number(bytes.substr(i * 8, 8)));
+    totals.push(bytes_to_number(bytes.substring(i * 8, i * 8 + 8)));
   }
   return totals;
 }
@@ -189,7 +189,8 @@ function bytes_to_num_array(bytes: string): number[] {
 function bytes_to_number(bytes: string): number {
   let total = 0;
   for (let i = 0; i < 4; i++) {
-    total += parseInt(bytes.substr(i * 2, 2), 16) / Math.pow(256, i + 1);
+    total +=
+      parseInt(bytes.substring(i * 2, i * 2 + 2), 16) / Math.pow(256, i + 1);
   }
   return total;
 }
@@ -205,7 +206,7 @@ export function handlePlinko(
   let payoutIndex = final_payout(risk, rows).length;
   console.log(payoutIndex);
   bytes_to_num_array(bytes(`${server_seed}${client_seed}${nonce}`)).map(
-    (value, index) => {
+    (value, _index) => {
       let direction = Math.floor(value * 2) ? ++payoutIndex : --payoutIndex;
       return nums.push(direction);
     }
