@@ -40,7 +40,7 @@ export class BallManager {
     });
     console.log("Adding ball");
     const newBall = new Ball(
-      startX || pad(WIDTH / 2 + 13),
+      startX ?? pad(WIDTH / 2 + 13),
       pad(50),
       ballRadius,
       "red",
