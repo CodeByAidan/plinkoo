@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import { BallManager } from "../game/classes/BallManager";
 import axios from "axios";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../components/ui";
+import { BallManager } from "../game/classes/BallManager";
 import { baseURL } from "../utils";
 
 export function Game() {

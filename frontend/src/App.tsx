@@ -1,9 +1,9 @@
 // import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Simulation } from "./pages/Simulation";
-import { Game } from "./pages/Game";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Footer, Navbar } from "./components";
+import { Game } from "./pages/Game";
 import { Home } from "./pages/Home";
+import { Simulation } from "./pages/Simulation";
 
 function App() {
   return (
