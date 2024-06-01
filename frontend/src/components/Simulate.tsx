@@ -6,8 +6,8 @@ import { pad } from "../game/padding";
 import { WIDTH } from "../game/constants";
 
 export const Simulate = () => {
-  const canvasRef = useRef<any>();
-  let [, setOutputs] = useState<{ [key: number]: number[] }>({
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [, setOutputs] = useState<{ [key: number]: number[] }>({
     0: [],
     1: [],
     2: [],
@@ -29,9 +29,7 @@ export const Simulate = () => {
   });
 
   async function simulate(ballManager: BallManager) {
-    let i = 0;
-    while (1) {
-      i++;
+    while (true) {
       ballManager.addBall(pad(WIDTH / 2 + 20 * (Math.random() - 0.5)));
       await new Promise((resolve) => setTimeout(resolve, 1000));
     }
