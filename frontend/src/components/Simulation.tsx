@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react";
 import { BallManager } from "../game/classes/BallManager";
 import { WIDTH } from "../game/constants";
 import { pad } from "../game/padding";

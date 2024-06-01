@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react"
-import { BallManager } from "../game/classes/BallManager";
 import axios from "axios";
+import { useEffect, useRef, useState } from "react";
+import { BallManager } from "../game/classes/BallManager";
 
 
 export function Game() {

@@ -1,7 +1,7 @@
-import { RxHamburgerMenu } from "react-icons/rx";
-import { Button } from "./ui";
-import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "./ui";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

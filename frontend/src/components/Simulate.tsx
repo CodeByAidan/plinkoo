@@ -1,9 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-
-// import { useNavigate } from "react-router-dom";
 import { BallManager } from "../game/classes/BallManager";
-import { pad } from "../game/padding";
 import { WIDTH } from "../game/constants";
+import { pad } from "../game/padding";
 
 export const Simulate = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
