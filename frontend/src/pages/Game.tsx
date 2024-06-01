@@ -6,7 +6,7 @@ import { baseURL } from "../utils";
 
 export function Game() {
   const [ballManager, setBallManager] = useState<BallManager>();
-  const canvasRef = useRef<any>();
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     if (canvasRef.current) {
